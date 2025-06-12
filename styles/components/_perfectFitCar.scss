@@ -1,0 +1,108 @@
+@import "../shared/colorVar";
+
+.perfectFitCarousel {
+  padding: 150px 0px;
+  width: 100%;
+  position: relative;
+
+  .carouselItem {
+    width: 100%;
+
+    .carouselImage {
+      background-color: #f3f3f3;
+      // width: 80%;
+      height: 600px;
+      margin-left: 20%;
+      margin-right: 0;
+      position: relative;
+      z-index: -1;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .carouselIntro {
+      width: 40%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      &-title {
+        font-size: 50px;
+        max-width: 35%;
+        letter-spacing: 1.2px;
+        font-family: helvetica;
+        padding-bottom: 50px;
+      }
+
+      &-desc {
+        width: 25%;
+        padding-left: 8%;
+        color: $secondry-font-color;
+        font-family: "H-Regular";
+        padding-bottom: 30px;
+        font-size: 15px;
+      }
+
+      &-btn {
+        margin-left: 8%;
+      }
+    }
+  }
+}
+
+.perfectFitArrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  // margin-top: -50px;
+
+  .leftArrow,
+  .rightArrow {
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+
+  .leftArrow {
+    &:hover {
+      transform: translateX(-10%);
+    }
+  }
+
+  .rightArrow {
+    &:hover {
+      transform: translateX(10%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1540px) {
+  .perfectFitCarousel {
+    .carouselItem {
+      .carouselImage {
+        height: 500px;
+      }
+
+      .carouselIntro {
+        &-title {
+          font-size: 45px;
+          padding-bottom: 30px;
+        }
+        &-desc {
+          width: 30%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

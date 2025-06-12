@@ -1,0 +1,245 @@
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .mobOptions {
+    width: 100vw;
+    position: fixed;
+    height: 50px;
+    bottom: 75px;
+    transition: all 0.4s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #0000001a;
+
+    .options-slide {
+      width: 100%;
+      margin: auto;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.4s ease-in-out;
+      background-color: #fff;
+
+      .optionTitle {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #646464;
+        font-size: 16px;
+        font-family: "H-Regular";
+        //   padding-top: 15px;
+
+        span {
+          position: absolute;
+          left: 50%;
+          height: 100%;
+          transform: translateX(-50%);
+          top: -7px;
+        }
+      }
+
+      .optionPanel {
+        background-color: #f3f1f0;
+        width: 100%;
+        padding: 15px 0;
+
+        // height: 100%;
+
+        &__soleEngraving {
+          padding: 0 15px;
+        }
+
+        .materialsOptions {
+          display: flex;
+          align-items: center;
+          overflow-x: auto;
+          padding: 0 15px;
+          height: 45px;
+          background-color: #fff;
+          margin-top: -10px;
+          margin-bottom: 15px;
+
+          & > * {
+            margin-right: 35px;
+            font-size: 17px;
+            font-family: "H-Regular";
+            color: #000;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .active-anim {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
+    .slider-btn-prev {
+      position: absolute;
+      top: 0;
+      height: 50px;
+      left: 0px;
+      padding-left: 30px;
+      // padding: 0 20px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slideBtnWrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .slider-btn-next {
+      position: absolute;
+      top: 0;
+      height: 50px;
+      padding-right: 30px;
+      right: 0px;
+      // width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slideBtnWrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .mobOptions {
+    width: 100vw;
+    position: fixed;
+    height: 50px;
+    bottom: 55px;
+    transition: all 0.4s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #0000001a;
+
+    .options-slide {
+      width: 100%;
+      margin: auto;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.3s ease-in-out;
+      background-color: #fff;
+
+      .optionTitle {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #646464;
+        font-size: 16px;
+        font-family: "H-Regular";
+        //   padding-top: 15px;
+
+        span {
+          position: absolute;
+          left: 50%;
+          height: 100%;
+          transform: translateX(-50%);
+          top: -7px;
+        }
+      }
+
+      .optionPanel {
+        background-color: #f3f1f0;
+        width: 100%;
+        padding: 6px 0;
+
+        // height: 100%;
+
+        &__soleEngraving {
+          padding: 0 15px;
+        }
+
+        .materialsOptions {
+          display: flex;
+          align-items: center;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding: 20px 15px;
+          max-height: 46px;
+          min-height: 46px;
+          background-color: #fff;
+          // margin-top: -10px;
+          margin-bottom: 8px;
+
+          & > * {
+            margin-right: 35px;
+            font-size: 17px;
+            font-family: "H-Regular";
+            color: #000;
+            white-space: nowrap;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+
+    .active-anim {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
+    .slider-btn-prev {
+      position: absolute;
+      top: 0;
+      height: 50px;
+      left: 0px;
+      padding-left: 30px;
+      // padding: 0 20px;
+
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slideBtnWrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .slider-btn-next {
+      position: absolute;
+      top: 0;
+      height: 50px;
+      padding-right: 30px;
+      right: 0px;
+      // width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slideBtnWrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

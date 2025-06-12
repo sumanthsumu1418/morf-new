@@ -1,0 +1,74 @@
+@import "../shared/colorVar";
+
+// first Part
+
+.customise-heading {
+  font-size: 50px;
+  font-family: "H-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.customise {
+  height: 100%;
+  width: 100%;
+
+  &-para p {
+    color: $secondry-font-color;
+    font-family: "H-Regular";
+    font-size: 14px;
+    line-height: 15px;
+    padding-bottom: 20px;
+    width: 70%;
+  }
+
+  &-image img {
+    height: 80vh;
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+  }
+}
+
+// Second Part
+
+.shop-collection-heading {
+  text-transform: uppercase;
+  font-size: 50px;
+  padding-bottom: 50px;
+  font-family: "H-Bold";
+}
+
+.grid-item,
+.grid-item2 {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.active {
+  width: calc(33.333% - 10px);
+}
+
+.gutter,
+.gutter2 {
+  width: 15px;
+}
+
+.slowTransition {
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-property: all;
+  -o-transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

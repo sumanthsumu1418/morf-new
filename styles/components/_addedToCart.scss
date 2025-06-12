@@ -1,0 +1,66 @@
+.addedToCart {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.666);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &--lottieWrapper {
+      width: 300px;
+      height: 300px;
+    }
+
+    &--text {
+      font-size: 26px;
+      font-family: "H-Light";
+      color: #fff;
+      text-align: center;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .addedToCart {
+    &__content {
+      &--lottieWrapper {
+        width: 150px;
+        height: 150px;
+      }
+
+      &--text {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .addedToCart {
+    &__content {
+      &--lottieWrapper {
+        width: 150px;
+        height: 150px;
+      }
+
+      &--text {
+        font-size: 22px;
+      }
+    }
+  }
+}

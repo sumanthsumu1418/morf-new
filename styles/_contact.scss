@@ -1,0 +1,609 @@
+.contactUs {
+  padding: 50px 0px;
+  max-width: 1200px !important;
+  position: relative;
+
+  .contactOver {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: white;
+  }
+
+  &__heading {
+    font-family: "H-Bold";
+    font-size: 80px;
+    padding: 10px 0px;
+  }
+
+  &__subHeading {
+    font-size: 27px;
+    font-family: "H-Regular";
+    padding: 10px 0px;
+  }
+
+  &__form {
+    padding: 50px 0px;
+    width: 80%;
+
+    &--firstRow {
+      display: flex;
+    }
+
+    .nameField {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      padding-right: 50px;
+      padding-bottom: 50px;
+
+      .contactUsLabel {
+        padding-bottom: 10px;
+        font-size: 12px;
+        font-family: "H-Bold";
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .contactUsInput {
+        border: none;
+        height: 45px;
+        font-size: 27px;
+        font-family: "H-Regular";
+        outline: none;
+        //   padding-left: 10px;
+        border-bottom: 1px solid black;
+      }
+    }
+
+    .textareaDiv {
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+
+      .textarea {
+        max-width: 100%;
+        // width: 20;
+        // height: 50px;
+        resize: none;
+        border-bottom: 1px solid black !important;
+        line-height: 120%;
+        font-size: 40px;
+        font-family: "H-Regular";
+        color: black;
+        outline: none;
+        border: none;
+
+        &::placeholder {
+          overflow: hidden;
+          //   border-right: 0.05em solid #464545;
+          white-space: nowrap;
+
+          font-family: "H-Regular";
+          font-size: 80px;
+          color: rgb(189, 187, 187);
+        }
+      }
+
+      .autoTyped {
+        .typeTxt {
+          width: 0;
+          max-width: max-content;
+          overflow: hidden;
+          border-right: 0.05em solid #464545; /* The typwriter cursor */
+          white-space: nowrap; /* Keeps the content on a single line */
+          margin: 0;
+          font-family: "H-Regular";
+          font-size: 80px;
+          color: rgb(216, 214, 214);
+          animation: typing-erase 5s steps(80, end) infinite,
+            blink-caret 0.5s step-end infinite 5s;
+
+          /* The type and erase effect */
+          @keyframes typing-erase {
+            0% {
+              width: 0;
+            }
+            80% {
+              width: 100%;
+            }
+            90%,
+            100% {
+              width: 0;
+            }
+          }
+
+          /* The typewriter cursor effect */
+          @keyframes blink-caret {
+            from,
+            to {
+              border-color: transparent;
+            }
+            50% {
+              border-color: gray;
+            }
+          }
+        }
+      }
+    }
+
+    .contactUsButton {
+      margin-top: 30px;
+      float: right;
+      margin-right: 50px;
+      transition: all 0.5s ease-out;
+      padding: 10px 14px;
+      font-size: 18px;
+      height: 45px;
+      border: 1px solid #000000;
+      outline: none;
+      cursor: pointer;
+      font-family: "H-Regular";
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      background-color: #000;
+      color: #fff;
+      position: relative;
+
+      span {
+        position: relative;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: "";
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(0, 1);
+        transform-origin: right center;
+        background: white;
+      }
+
+      &:hover {
+        color: black;
+        &::before {
+          transform: scale(1, 1);
+          transform-origin: left center;
+        }
+      }
+    }
+  }
+}
+
+.contact_successMsg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .contact_successMsgText {
+    font-size: 40px;
+    color: #000000;
+    font-family: "H-Regular";
+    text-align: center;
+    line-height: 150%;
+  }
+}
+
+.loaderBtn {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.loaderBtn--dot {
+  animation-name: loader;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  border: 2px solid white;
+  opacity: 0.7;
+}
+.loaderBtn--dot:first-child {
+  background-color: #fff;
+  animation-delay: 0.4s;
+}
+.loaderBtn--dot:nth-child(2) {
+  background-color: #fff;
+  animation-delay: 0.3s;
+}
+.loaderBtn--dot:nth-child(3) {
+  background-color: #fff;
+  animation-delay: 0.2s;
+}
+.loaderBtn--dot:nth-child(4) {
+  background-color: #fff;
+  animation-delay: 0.1s;
+}
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(155px);
+  }
+  65% {
+    transform: translateX(155px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .contactUs {
+    padding: 40px 0px;
+
+    &__heading {
+      font-size: 60px;
+    }
+
+    &__subHeading {
+      font-size: 22px;
+      padding: 0px 0px;
+    }
+
+    &__form {
+      padding: 50px 0px;
+
+      &--firstRow {
+        display: flex;
+      }
+
+      .nameField {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+      }
+
+      .textareaDiv {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+
+        .textarea {
+          font-size: 30px;
+
+          &::placeholder {
+            font-size: 60px;
+          }
+        }
+
+        .autoTyped {
+          .typeTxt {
+            font-size: 60px;
+          }
+        }
+      }
+
+      .contactUsButton {
+        margin-top: 30px;
+        float: right;
+        margin-right: 50px;
+        transition: all 0.5s ease-out;
+        padding: 10px 14px;
+        font-size: 18px;
+        height: 45px;
+        border: 1px solid #000000;
+        outline: none;
+        cursor: pointer;
+        font-family: "H-Regular";
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        background-color: #000;
+        color: #fff;
+        position: relative;
+
+        span {
+          position: relative;
+        }
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          content: "";
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background: white;
+        }
+
+        &:hover {
+          color: black;
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .contactUs {
+    padding: 0px 20px;
+    max-width: 1200px !important;
+    position: relative;
+
+    .contactOver {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: white;
+    }
+
+    &__heading {
+      font-size: 60px;
+    }
+
+    &__subHeading {
+      font-size: 22px;
+    }
+
+    &__form {
+      padding: 40px 0px;
+      width: 100%;
+      padding-bottom: 40px;
+      &--firstRow {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nameField {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 50px;
+
+        .contactUsLabel {
+          padding-bottom: 10px;
+          font-size: 12px;
+          font-family: "H-Bold";
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+        }
+
+        .contactUsInput {
+          border: none;
+          height: 45px;
+          font-size: 16px;
+          font-family: "H-Regular";
+          outline: none;
+          //   padding-left: 10px;
+          border-bottom: 1px solid black;
+        }
+      }
+
+      .textareaDiv {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+
+        .textarea {
+          max-width: 100%;
+          // width: 20;
+          // height: 50px;
+          resize: none;
+          border-bottom: 1px solid black !important;
+          line-height: 120%;
+          font-size: 16px;
+          font-family: "H-Regular";
+          color: black;
+          outline: none;
+          border: none;
+
+          &::placeholder {
+            overflow: hidden;
+            //   border-right: 0.05em solid #464545;
+            white-space: nowrap;
+
+            font-family: "H-Regular";
+            font-size: 24px;
+            color: rgb(189, 187, 187);
+          }
+        }
+
+        .autoTyped {
+          .typeTxt {
+            width: 0;
+            max-width: max-content;
+            overflow: hidden;
+            border-right: 0.05em solid #464545; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0;
+            font-family: "H-Regular";
+            font-size: 28px;
+            color: rgb(216, 214, 214);
+          }
+        }
+      }
+
+      .contactUsButton {
+        margin-top: 30px;
+        float: left;
+        margin-right: 0px;
+        transition: all 0.5s ease-out;
+        padding: 10px 14px;
+        font-size: 18px;
+        height: 45px;
+        border: 1px solid #000;
+        outline: none;
+        cursor: pointer;
+        font-family: "H-Regular";
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        background-color: #000;
+        color: #fff;
+        position: relative;
+
+        span {
+          position: relative;
+        }
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          content: "";
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background: white;
+        }
+
+        &:hover {
+          color: black;
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .contactUs {
+    padding: 0px 10px;
+    max-width: 1200px !important;
+    position: relative;
+    padding-bottom: 100px;
+    .contactOver {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background: white;
+    }
+
+    &__heading {
+      font-size: 40px;
+    }
+
+    &__subHeading {
+      font-size: 16px;
+    }
+
+    &__form {
+      padding: 40px 0px;
+      width: 100%;
+      padding-bottom: 40px;
+      &--firstRow {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nameField {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-right: 0px;
+        padding-bottom: 50px;
+
+        .contactUsLabel {
+          padding-bottom: 10px;
+          font-size: 12px;
+          font-family: "H-Bold";
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+        }
+
+        .contactUsInput {
+          border: none;
+          height: 35px;
+          font-size: 12px;
+          font-family: "H-Regular";
+          outline: none;
+          //   padding-left: 10px;
+          border-bottom: 1px solid black;
+        }
+      }
+
+      .textareaDiv {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+
+        .textarea {
+          max-width: 100%;
+          // width: 20;
+          // height: 50px;
+          resize: none;
+          border-bottom: 1px solid black !important;
+          line-height: 120%;
+          font-size: 12px;
+          font-family: "H-Regular";
+          color: black;
+          outline: none;
+          border: none;
+
+          &::placeholder {
+            overflow: hidden;
+            //   border-right: 0.05em solid #464545;
+            white-space: nowrap;
+
+            font-family: "H-Regular";
+            font-size: 12px;
+            color: rgb(189, 187, 187);
+          }
+        }
+
+        .autoTyped {
+          .typeTxt {
+            width: 0;
+            max-width: max-content;
+            overflow: hidden;
+            border-right: 0.05em solid #464545; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0;
+            font-family: "H-Regular";
+            font-size: 18px;
+            color: rgb(216, 214, 214);
+          }
+        }
+      }
+
+      .contactUsButton {
+        float: left;
+        font-size: 14px;
+      }
+    }
+  }
+}

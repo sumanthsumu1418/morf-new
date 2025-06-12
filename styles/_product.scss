@@ -1,0 +1,1694 @@
+.productSection {
+  background-color: #f1efee;
+}
+
+.product {
+  // padding-top: 50px;
+  display: flex;
+  background-color: #f1efee;
+  padding-bottom: 8%;
+  // height: calc(100vh - 100px);
+
+  &__first {
+    // height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+    padding-right: 5%;
+    background-color: #f1efee;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .firstSlider {
+      .slick-list {
+        .slick-track {
+          .slick-slide {
+            img {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .secondSlider {
+      width: 100%;
+      // position: absolute;
+      // bottom: 0%;
+      background-color: #f1efee;
+      padding-top: 20px;
+
+      .slick-list {
+        .slick-track {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .slick-slide {
+            height: 120px;
+            width: 120px;
+            overflow: hidden;
+            margin: 0 10px;
+            transition: border opacity 0.3s;
+            border: 1px solid #ffffff;
+            outline: none;
+
+            // opacity: 0.7;
+
+            img {
+              height: 120px;
+              cursor: pointer;
+              width: 120px;
+              object-fit: cover;
+              object-position: center;
+              &:focus,
+              &:active {
+                outline: none;
+              }
+            }
+          }
+          .slick-current {
+            border: 1px solid #570707;
+            opacity: 1;
+            box-shadow: 1px 1px 10px 2px #8888884b;
+          }
+        }
+      }
+    }
+  }
+
+  &__second {
+    width: 30%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    // min-height: calc(100vh - 180px);
+
+    &--heading {
+      font-size: 50px;
+      font-family: "H-Light";
+      font-weight: 100;
+    }
+
+    &--price {
+      color: #000;
+      font-weight: 100;
+      font-size: 35px;
+      font-family: "H-Light";
+      margin: 1.5% 0 4% 0;
+    }
+
+    &--discription {
+      font-size: 15px;
+      font-family: "H-Light";
+      line-height: 160%;
+      margin-bottom: 1%;
+    }
+
+    &--fmpf {
+      text-decoration: none;
+      color: #570707;
+      font-size: 17px;
+      font-family: "H-Regular";
+      text-underline-offset: 7px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &--sizeSelect {
+      margin-top: 15px;
+
+      .sizeButton {
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          background-color: #000 !important;
+          overflow: hidden !important;
+          border-radius: "3px" !important;
+
+          p {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+
+    .productThreeButtons {
+      display: flex;
+      margin: 5% 0;
+      position: relative;
+
+      .tbtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // padding-left: 10px;
+        border: 1px solid black;
+        height: 42px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: black;
+          color: white;
+        }
+
+        &:hover {
+          color: black;
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+          .customisebtn__txt {
+            color: white;
+          }
+
+          .wishlistbtn__icon g path {
+            stroke: #fff;
+            z-index: 10;
+          }
+        }
+      }
+
+      .addEngravingInputContainer {
+        position: absolute;
+        // left: 69%;
+        top: 42px;
+        width: calc(100% - 52px);
+        right: 52px;
+        // height: 264px;
+        z-index: 2;
+        padding: 20px 40px;
+        background-color: white;
+        display: flex;
+        .addEngravingInput {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &--headingCon {
+            &--heading {
+              font-family: "H-Light";
+              color: #646464;
+              font-size: 14px;
+            }
+          }
+          &--inputCon {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            &--input {
+              border: 1px solid #ebe6df;
+              border-radius: 0;
+              background-color: #f3f1f0;
+              margin-bottom: 15px;
+              height: 42px;
+              font-size: 14px;
+              font-family: "H-Light";
+              padding: 14px 22px;
+              &::placeholder {
+                color: #707070;
+              }
+              outline: none;
+              &:active {
+                outline: 0.5px solid #ebe6df;
+              }
+            }
+            &--txt {
+              font-family: "H-Light";
+              color: #646464;
+              font-size: 12px;
+            }
+          }
+          &--buttonsCon {
+            display: flex;
+            justify-content: center;
+
+            &--button {
+              margin-top: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 42px;
+              // width: 142px;
+              width: 100%;
+
+              span {
+                font-size: 14px;
+                font-family: "H-Light";
+              }
+            }
+          }
+        }
+      }
+
+      .customisebtn {
+        flex: 1;
+        margin-right: 2%;
+
+        &__txt {
+          font-size: 13px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+          position: relative;
+        }
+      }
+
+      .productShareBtn {
+        &:hover {
+          span {
+            svg {
+              path {
+                stroke: #fff !important;
+                fill: #fff !important;
+              }
+            }
+          }
+        }
+      }
+
+      .wishlistbtn {
+        width: 43px;
+
+        &__icon {
+          transition: all 0.3s;
+          position: relative;
+        }
+      }
+    }
+
+    &--engravingInput {
+      margin: 3% 0;
+      border: 2px solid #c8b8a0;
+      height: 42px;
+      width: 100%;
+
+      font-size: 14px;
+      font-family: "H-Light";
+      letter-spacing: 1px;
+      text-align: center;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--twoButtons {
+      display: flex;
+
+      &--buyBtn {
+        margin: 5% 0% 12% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+
+        height: 42px;
+        width: 50%;
+        cursor: pointer;
+
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: #c8b8a0;
+        }
+
+        .txt {
+          position: relative;
+          color: white;
+          font-size: 14px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+      .second {
+        margin-left: 2%;
+      }
+    }
+
+    &--productAccordion {
+      padding: 30px 0;
+    }
+  }
+}
+
+.suggestionSec {
+  .suggestion {
+    padding-top: 8%;
+    padding-bottom: 5%;
+    // margin-right: 0;
+
+    // padding-left: 3%;
+    // overflow: hidden;
+
+    &__heading {
+      font-size: 30px;
+      font-family: "H-Light";
+      margin-bottom: 2%;
+      font-weight: 100;
+    }
+
+    .suggestedCardWrapper {
+      &:active,
+      &:focus {
+        outline: none;
+      }
+      .suggestedCard {
+        // height: 560px;
+        width: 100%;
+        outline: none;
+
+        // img {
+        //   height: 480px;
+        // }
+      }
+    }
+
+    &__viewMore {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        // color: #f5f4f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // font-size: 18px;
+        font-family: "H-Regular";
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Accordion
+
+.accComponent {
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 15px 0;
+    border-top: 1px solid #000000;
+    cursor: pointer;
+
+    p {
+      font-size: 12px;
+      font-family: "H-Bold";
+    }
+
+    svg {
+      transition: all 0.3s ease-out;
+    }
+  }
+
+  &__plane {
+    // margin-bottom: 10px;
+    padding-right: 6%;
+    transition: max-height 0.3s ease-out;
+
+    div {
+      font-size: 14px;
+      line-height: 180%;
+      font-family: "H-Light";
+      padding-bottom: 3%;
+    }
+  }
+}
+
+.suggestion__card__product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 100px;
+  gap: 20px;
+}
+
+.suggestedCardWrapper {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1600px) {
+  .productSection {
+    background-color: #f1efee;
+  }
+
+  .product {
+    &__first {
+      .firstSlider {
+      }
+      .secondSlider {
+        width: 100%;
+        // position: absolute;
+        // bottom: 0%;
+        background-color: #f1efee;
+
+        .slick-list {
+          .slick-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slick-slide {
+              height: 90px;
+              width: 90px;
+              overflow: hidden;
+              margin: 0 10px;
+              transition: border opacity 0.3s;
+              border: 1px solid #ffffff;
+              outline: none;
+
+              // opacity: 0.7;
+
+              img {
+                height: 120px;
+                width: 120px;
+                object-fit: cover;
+                object-position: center;
+                &:focus,
+                &:active {
+                  outline: none;
+                }
+              }
+            }
+            .slick-current {
+              border: 1px solid #570707;
+              opacity: 1;
+              box-shadow: 1px 1px 10px 2px #8888884b;
+            }
+          }
+        }
+      }
+    }
+
+    &__second {
+      &--heading {
+        font-size: 40px;
+      }
+
+      &--price {
+        font-size: 30px;
+      }
+
+      &--discription {
+        font-size: 12px;
+      }
+
+      &--fmpf {
+        font-size: 14px;
+      }
+
+      .productThreeButtons {
+        display: flex;
+        // margin: 3% 0;
+
+        .tbtn {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          border: 1px solid black;
+          height: 42px;
+
+          cursor: pointer;
+
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0, 1);
+            transform-origin: right center;
+            background-color: black;
+            color: white;
+          }
+
+          &:hover {
+            color: black;
+            &::before {
+              transform: scale(1, 1);
+              transform-origin: left center;
+            }
+            .customisebtn__txt {
+              color: white;
+            }
+
+            .wishlistbtn__icon svg {
+              // stroke: white;
+            }
+          }
+        }
+
+        .addEngravingInputContainer {
+          position: absolute;
+          top: 42px;
+          width: calc(100% - 50px);
+          right: 50px;
+          z-index: 2;
+          padding: 20px 25px;
+          background-color: white;
+          display: flex;
+
+          .addEngravingInput {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &--headingCon {
+              &--heading {
+                font-family: "H-Light";
+                color: #646464;
+                font-size: 12px;
+              }
+            }
+            &--inputCon {
+              margin-top: 15px;
+              display: flex;
+              flex-direction: column;
+
+              &--input {
+                border: 1px solid #ebe6df;
+                border-radius: 0;
+                background-color: #f3f1f0;
+                margin-bottom: 15px;
+                height: 42px;
+                font-size: 12px;
+                font-family: "H-Light";
+                padding: 14px 15px;
+                &::placeholder {
+                  color: #707070;
+                }
+                outline: none;
+                &:active {
+                  outline: 0.5px solid #ebe6df;
+                }
+              }
+              &--txt {
+                font-family: "H-Light";
+                color: #646464;
+                font-size: 10px;
+              }
+            }
+            &--buttonsCon {
+              display: flex;
+              justify-content: center;
+
+              &--button {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 42px;
+                // width: 142px;
+                width: 100%;
+
+                span {
+                  font-size: 12px;
+
+                  font-family: "H-Light";
+                }
+              }
+            }
+          }
+        }
+
+        .customisebtn {
+          flex: 1;
+          margin-right: 2%;
+
+          &__txt {
+            font-size: 12px;
+            font-family: "H-Light";
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+          }
+        }
+
+        .wishlistbtn {
+          width: 43px;
+
+          &__icon {
+            transition: all 0.3s;
+            position: relative;
+          }
+        }
+      }
+
+      &--engravingInput {
+        margin: 3% 0;
+        border: 2px solid #c8b8a0;
+        height: 42px;
+        width: 100%;
+
+        font-size: 14px;
+        font-family: "H-Light";
+        letter-spacing: 1px;
+        text-align: center;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &--buyBtn {
+        // margin: 3% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        height: 42px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: #c8b8a0;
+        }
+
+        .txt {
+          position: relative;
+          color: white;
+          font-size: 14px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+
+      &--productAccordion {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  .suggestion {
+    padding-top: 8%;
+    padding-bottom: 5%;
+    &__heading {
+      font-size: 30px;
+      font-family: "H-Light";
+      margin-bottom: 2%;
+      font-weight: 100;
+    }
+
+    &__viewMore {
+      a {
+        // color: #f5f4f2;
+        font-size: 14px !important;
+      }
+    }
+
+    .suggestedCardWrapper {
+      &:active,
+      &:focus {
+        outline: none;
+      }
+      .suggestedCard {
+        // height: 560px;
+        width: 100%;
+        outline: none;
+
+        img {
+          // height: 360px !important;
+        }
+      }
+    }
+  }
+
+  // Accordion
+
+  .accComponent {
+    &__title {
+      padding: 20px 0 10px 0;
+    }
+  }
+
+  .suggestion__card__product {
+    display: flex;
+  }
+
+  .suggestedCardWrapper {
+    width: 25%;
+    // min-width: 25%;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .product {
+    // padding-top: 50px;
+    flex-direction: column;
+    background-color: #f1efee;
+    padding-bottom: 10%;
+    // height: calc(100vh - 100px);
+
+    &__first {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding-right: 0%;
+      background-color: #f1efee;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .firstSlider {
+        img {
+          margin-bottom: 50px;
+        }
+
+        .slick-dots {
+          bottom: 0;
+        }
+
+        .slick-dots li {
+          width: 10px;
+        }
+
+        .slick-dots li button:before {
+          font-size: 10px;
+        }
+      }
+
+      .secondSlider {
+        display: none;
+
+        .slick-list {
+          .slick-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slick-slide {
+              height: 120px;
+              width: 120px;
+              overflow: hidden;
+              margin: 0 10px;
+              transition: border opacity 0.3s;
+              border: 1px solid #ffffff;
+              outline: none;
+
+              // opacity: 0.7;
+
+              img {
+                height: 120px;
+                width: 120px;
+                object-fit: cover;
+                object-position: center;
+                &:focus,
+                &:active {
+                  outline: none;
+                }
+              }
+            }
+            .slick-current {
+              border: 1px solid #570707;
+              opacity: 1;
+              box-shadow: 1px 1px 10px 2px #8888884b;
+            }
+          }
+        }
+      }
+    }
+
+    &__second {
+      width: 100%;
+      padding-right: 0;
+      min-height: auto;
+      margin-top: 60px;
+
+      &--heading {
+        font-size: 30px;
+      }
+
+      &--price {
+        font-size: 24px;
+      }
+
+      &--discription {
+        font-size: 14px;
+        display: none;
+      }
+
+      &--fmpf {
+        text-decoration: none;
+        color: #570707;
+        font-size: 17px;
+        font-family: "H-Regular";
+        text-underline-offset: 7px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &--sizeSelect {
+        margin-top: 15px;
+      }
+
+      .productThreeButtons {
+        display: flex;
+        margin: 5% 0;
+        // position: fixed !important;
+        // bottom: 0 !important;
+
+        .tbtn {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          border: 1px solid black;
+          height: 42px;
+          cursor: pointer;
+          position: relative;
+
+          // &:nth-child(1) {
+          //   position: fixed !important;
+          //   bottom: 0 !important;
+          //   width: 50vw;
+          //   left: 0;
+          //   height: 60px;
+          //   z-index: 100;
+          //   background-color: #000;
+          //   color: #fff !important;
+          //   border-right: 1px solid #fff;
+          // }
+
+          // &:nth-child(2) {
+          //   position: fixed !important;
+          //   bottom: 0 !important;
+          //   width: 50vw;
+          //   height: 60px;
+          //   right: 0;
+          //   z-index: 100;
+          //   margin-right: 0;
+          //   background-color: #000;
+          //   color: #fff !important;
+          // }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0, 1);
+            transform-origin: right center;
+            background-color: black;
+            color: white;
+          }
+
+          &:hover {
+            color: black;
+            &::before {
+              transform: scale(1, 1);
+              transform-origin: left center;
+            }
+            .customisebtn__txt {
+              color: white;
+            }
+
+            .wishlistbtn__icon {
+              stroke: white;
+            }
+          }
+        }
+
+        .customisebtn {
+          flex: 1;
+          margin-right: 2%;
+
+          &__txt {
+            font-size: 13px;
+            font-family: "H-Light";
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+          }
+        }
+
+        .wishlistbtn {
+          width: 43px;
+
+          &__icon {
+            transition: all 0.3s;
+            position: relative;
+          }
+        }
+      }
+
+      &--engravingInput {
+        margin: 3% 0;
+        border: 2px solid #c8b8a0;
+        height: 42px;
+        width: 100%;
+
+        font-size: 14px;
+        font-family: "H-Light";
+        letter-spacing: 1px;
+        text-align: center;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &--buyBtn {
+        margin: 5% 0 3% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+
+        height: 42px;
+
+        cursor: pointer;
+
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: #c8b8a0;
+        }
+
+        .txt {
+          position: relative;
+          color: white;
+          font-size: 14px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+
+      &--twoButtons {
+        &--buyBtn {
+          margin: 0% 0% 5% 0;
+
+          height: 42px;
+          width: 60%;
+        }
+        .second {
+          margin-left: 2%;
+        }
+      }
+
+      &--productAccordion {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  .suggestionSec {
+    padding-top: 0%;
+    overflow: hidden;
+
+    .suggestion {
+      padding-top: 10%;
+      padding-bottom: 5%;
+      width: 100%;
+
+      &__heading {
+        font-size: 30px;
+        font-family: "H-Light";
+        text-align: center;
+        margin-bottom: 10%;
+        font-weight: 100;
+      }
+
+      .suggestion__card__product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 100px;
+        gap: 15px;
+        overflow: hidden;
+      }
+
+      .suggestedCardWrapper {
+        min-width: 45%;
+        width: 100%;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+        .suggestedCard {
+          // height: 560px;
+          width: 95%;
+          outline: none;
+          width: 100% !important;
+          margin-left: 0% !important;
+          height: 100% !important;
+
+          img {
+            height: 400px !important;
+          }
+        }
+      }
+
+      &__viewMore {
+        width: 100%;
+        a {
+          // color: #f5f4f2;
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .product {
+    // padding-top: 50px;
+    flex-direction: column;
+    background-color: #f1efee;
+    padding-bottom: 10%;
+    width: 100% !important;
+    // height: calc(100vh - 100px);
+
+    &__first {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding-right: 0%;
+      background-color: #f1efee;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        scale: 1.15;
+        margin-top: 17px;
+
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .firstSlider {
+        img {
+          margin-bottom: 50px;
+        }
+
+        .slick-dots {
+          bottom: 0;
+        }
+
+        .slick-dots li {
+          width: 10px;
+        }
+
+        .slick-dots li button:before {
+          font-size: 10px;
+        }
+      }
+
+      .secondSlider {
+        display: none;
+
+        .slick-list {
+          .slick-track {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slick-slide {
+              height: 120px;
+              width: 120px;
+              overflow: hidden;
+              margin: 0 10px;
+              transition: border opacity 0.3s;
+              border: 1px solid #ffffff;
+              outline: none;
+
+              // opacity: 0.7;
+
+              img {
+                height: 120px;
+                width: 120px;
+                object-fit: cover;
+                object-position: center;
+                &:focus,
+                &:active {
+                  outline: none;
+                }
+              }
+            }
+            .slick-current {
+              border: 1px solid #570707;
+              opacity: 1;
+              box-shadow: 1px 1px 10px 2px #8888884b;
+            }
+          }
+        }
+      }
+    }
+
+    &__second {
+      width: 95% !important;
+      padding-right: 0;
+      min-height: calc(100vh - 1876px);
+      margin-top: 20px !important;
+      position: relative;
+      margin: auto;
+      &--heading {
+        font-size: 25px;
+      }
+
+      .productShareBtn {
+        position: absolute !important;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid black;
+        height: 42px;
+        cursor: pointer;
+        padding: 0 11px;
+        &:hover {
+          span {
+            svg {
+              path {
+                stroke: #fff !important;
+                fill: #fff !important;
+              }
+            }
+          }
+        }
+      }
+
+      .tbtnMob {
+        position: absolute !important;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid black;
+        height: 42px;
+        cursor: pointer;
+        padding: 0 11px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: black;
+          color: white;
+        }
+
+        &:hover {
+          color: black;
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+          .customisebtn__txt {
+            color: white;
+          }
+
+          .wishlistbtn__icon {
+            stroke: white;
+          }
+        }
+      }
+
+      .customisebtnMob {
+        flex: 1;
+        margin-right: 2%;
+        position: absolute !important;
+        &__txt {
+          font-size: 13px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+          position: relative;
+        }
+      }
+
+      &--price {
+        font-size: 22px;
+        margin: 1.5% 0 2% 0;
+
+        span {
+          font-size: 13px !important;
+        }
+      }
+
+      &--discription {
+        font-size: 14px;
+        display: none;
+      }
+
+      &--fmpf {
+        text-decoration: none;
+        color: #570707;
+        font-size: 17px;
+        font-family: "H-Regular";
+        text-underline-offset: 7px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &--sizeSelect {
+        margin-top: 15px;
+      }
+
+      .productThreeButtons {
+        display: flex;
+        margin: 2% 0;
+        // position: fixed !important;
+        // bottom: 0 !important;
+
+        .tbtn {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+          border: 1px solid black;
+          height: 42px;
+          cursor: pointer;
+          position: relative;
+          margin-right: 0 !important;
+
+          // &:nth-child(1) {
+          //   position: fixed !important;
+          //   bottom: 0 !important;
+          //   width: 50vw;
+          //   left: 0;
+          //   height: 60px;
+          //   z-index: 100;
+          //   background-color: #000;
+          //   color: #fff !important;
+          //   border-right: 1px solid #fff;
+          // }
+
+          // &:nth-child(2) {
+          //   position: fixed !important;
+          //   bottom: 0 !important;
+          //   width: 50vw;
+          //   height: 60px;
+          //   right: 0;
+          //   z-index: 100;
+          //   margin-right: 0;
+          //   background-color: #000;
+          //   color: #fff !important;
+          // }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0, 1);
+            transform-origin: right center;
+            background-color: black;
+            color: white;
+          }
+
+          &:hover {
+            color: black;
+            &::before {
+              transform: scale(1, 1);
+              transform-origin: left center;
+            }
+            .customisebtn__txt {
+              color: white;
+            }
+
+            .wishlistbtn__icon {
+              stroke: white;
+            }
+          }
+        }
+
+        .customisebtn {
+          flex: 1;
+          margin-right: 2%;
+
+          &__txt {
+            font-size: 13px;
+            font-family: "H-Light";
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+          }
+        }
+
+        .wishlistbtn {
+          width: 43px;
+
+          &__icon {
+            transition: all 0.3s;
+            position: relative;
+          }
+        }
+      }
+
+      &--engravingInput {
+        margin: 3% 0;
+        border: 2px solid #c8b8a0;
+        height: 42px;
+        width: 100%;
+        margin-right: 0%;
+        font-size: 14px;
+        font-family: "H-Light";
+        letter-spacing: 1px;
+        text-align: center;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &--twoButtons {
+        display: flex;
+
+        &--buyBtn {
+          margin: 0.5% 0 3% 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: black;
+
+          height: 42px;
+          width: 100%;
+          cursor: pointer;
+
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0, 1);
+            transform-origin: right center;
+            background-color: #c8b8a0;
+          }
+
+          .txt {
+            position: relative;
+            color: white;
+            font-size: 14px;
+            font-family: "H-Light";
+            letter-spacing: 1px;
+            transition: color 0.3s;
+          }
+
+          &:hover {
+            &::before {
+              transform: scale(1, 1);
+              transform-origin: left center;
+            }
+          }
+        }
+      }
+
+      .addEngravingInputContainer {
+        position: absolute;
+        // left: 69%;
+        top: 42px;
+        width: 100% !important;
+        left: 0%;
+        right: 0px;
+        // height: 264px;
+        z-index: 2;
+        padding: 20px 40px;
+        background-color: white;
+        display: flex;
+        .addEngravingInput {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &--headingCon {
+            &--heading {
+              font-family: "H-Light";
+              color: #646464;
+              font-size: 14px;
+            }
+          }
+          &--inputCon {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            &--input {
+              border: 1px solid #ebe6df;
+              border-radius: 0;
+              background-color: #f3f1f0;
+              margin-bottom: 15px;
+              height: 42px;
+              font-size: 14px;
+              font-family: "H-Light";
+              padding: 14px 22px;
+              &::placeholder {
+                color: #707070;
+              }
+              outline: none;
+              &:active {
+                outline: 0.5px solid #ebe6df;
+              }
+            }
+            &--txt {
+              font-family: "H-Light";
+              color: #646464;
+              font-size: 12px;
+            }
+          }
+          &--buttonsCon {
+            display: flex;
+            justify-content: center;
+            &--button {
+              margin-top: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 42px;
+              // width: 142px;
+              width: 100%;
+
+              p {
+                font-size: 14px;
+                color: #000000;
+                font-family: "H-Light";
+              }
+            }
+          }
+        }
+      }
+
+      &--buyBtn {
+        // margin: 5% 0 3% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+
+        height: 42px;
+
+        cursor: pointer;
+
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transform: scale(0, 1);
+          transform-origin: right center;
+          background-color: #c8b8a0;
+        }
+
+        .txt {
+          position: relative;
+          color: white;
+          font-size: 14px;
+          font-family: "H-Light";
+          letter-spacing: 1px;
+          transition: color 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+      }
+
+      &--productAccordion {
+        padding: 30px 0;
+      }
+    }
+  }
+
+  .suggestionSec {
+    padding-top: 10%;
+    overflow: hidden;
+
+    .suggestion {
+      padding-top: 0%;
+      padding-bottom: 5%;
+      width: 100%;
+
+      &__heading {
+        font-size: 25px;
+        font-family: "H-Light";
+        text-align: center;
+        margin-bottom: 10%;
+        font-weight: 100;
+      }
+
+      .suggestion__card__product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 10px;
+        gap: 10px;
+        overflow: hidden;
+      }
+
+      .suggestedCardWrapper {
+        min-width: 45%;
+        width: 100%;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+        .suggestedCard {
+          // height: 560px;
+          width: 95%;
+          outline: none;
+          width: 100% !important;
+          margin-left: 0% !important;
+          height: 100% !important;
+
+          img {
+            height: 223px !important;
+          }
+        }
+      }
+
+      &__viewMore {
+        width: 100%;
+        a {
+          // color: #f5f4f2;
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}

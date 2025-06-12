@@ -1,0 +1,68 @@
+1. Without login , Add to cart and wishlist BUG! 
+Add to wishlist =>login (done)
+Add to Cart => Guest User  (done)
+Guest User login in Billing Screen.... (clarification needed) 
+---> Login Logout Bug (done)
+--------------------------------------------------------
+
+
+6. Email Integration
+
+--------------------------------------------------------
+
+7. A) Burger Menu
+   B) Profile , Widgets , change password
+
+--------------------------------------------------------
+
+8. Filter , Category(done) + (Color)
+
+--------------------------------------------------------
+
+10. View more on Shop and Filters page (done)
+
+--------------------------------------------------------
+
+9. Social Login (Google and FB)
+
+
+--------------------------------------------------------
+
+2. You may also like integration(done)
+
+--------------------------------------------------------
+
+3. Billing Details Based on Currency has to Change(done)
+
+--------------------------------------------------------
+
+
+5. Notifications   1. Add to Cart && Wishlist(done )  +  Image consistency(done)
+                   2. Login / Logout (done)
+--------------------------------------------------------
+
+
+NEW:- 
+
+1. Email Integration => Contact US (Mailchimp), Registration (Mail -> OTP)  
+2. Email Validation(Login Signup Newletter Contact) and Checkout Validation (done)
+3. Product Prices Diff in frontend and vendure (same)
+
+
+-------------------------
+Auth Issue + Payment
+-------------------------
+
+
+------------------------------------------------
+NEW 1-8-22
+
+1. Payment
+2. Email
+3. SnapWidget
+4. HotJar
+5. ShipRocket
+
+
+fe => tempBranch 
+be =>email Branch

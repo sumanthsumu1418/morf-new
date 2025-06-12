@@ -1,0 +1,53 @@
+@import "../shared/colorVar";
+.start-design {
+  &-header {
+    padding-bottom: 20px;
+
+    &-title {
+      font-size: 40px;
+      font-family: "H-Bold";
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      font-size: 24px;
+      color: $secondry-font-color;
+      font-family: "H-Regular";
+      padding-left: 15px;
+    }
+  }
+
+  &-body {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &-first,
+    &-second,
+    &-third {
+      width: 33%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: $secondry-font-color;
+      margin-top: 10px;
+      font-weight: lighter;
+      text-transform: uppercase;
+      font-family: "H-Light";
+    }
+  }
+}
+
+// .shoe-category-title {
+//     font-size: 20px;
+//     color: #707070;
+//     margin-top: 10px;
+//     font-weight: lighter;
+//     text-transform: uppercase;
+//   }

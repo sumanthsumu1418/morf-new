@@ -1,0 +1,1474 @@
+.checkout {
+  height: 100vh;
+  padding-top: 200px;
+
+  &__heading {
+    font-family: "H-Bold";
+    font-size: 40px;
+    padding: 20px 110px;
+  }
+
+  &__loginDiv {
+    font-size: 16px;
+    padding: 0px 115px;
+    display: flex;
+    .returning {
+      font-family: "H-Regular";
+      color: #707070;
+      padding-right: 10px;
+    }
+
+    .loginText {
+      font-family: "H-Bold";
+      color: black;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px;
+
+    &--first {
+      overflow: scroll;
+      width: 48%;
+      height: 70vh;
+      padding-right: 20px;
+      &::-webkit-scrollbar {
+        width: 2.5px;
+        height: 0 !important;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #98989800;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #3e3e3e;
+        border-radius: 5px;
+      }
+      .billingDetail {
+        font-size: 24px;
+        font-family: "H-Bold";
+      }
+
+      .checkoutForm {
+        padding: 30px 0px;
+        // width: 600px;
+
+        .checkoutLabel {
+          font-size: 14px;
+          font-family: "H-Bold";
+          color: #a1a1a1;
+          text-transform: uppercase;
+          letter-spacing: 0.6px;
+        }
+
+        .inputDiv,
+        .exception {
+          width: 100%;
+          height: 45px;
+          font-size: 15px;
+          background-color: #ebebeb;
+          border: none;
+          outline: none;
+          color: #a1a1a1;
+          // text-transform: uppercase;
+          padding-left: 10px;
+          margin-bottom: 20px;
+          margin-top: 10px;
+        }
+
+        .countryDiv {
+          // width: 600px;
+          padding-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+
+          .customSelect {
+            font-family: "H-Regular";
+            font-size: 14px;
+            padding-top: 10px;
+          }
+        }
+
+        .nameDiv {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .firstNameDiv,
+          .lastNameDiv {
+            width: 47%;
+          }
+        }
+
+        .createAccDiv {
+          display: flex;
+          padding-bottom: 35px;
+          align-items: center;
+
+          .checkBox {
+            width: 20px;
+            height: 20px;
+            // background: white;
+            border-radius: 50%;
+            margin-right: 20px;
+            cursor: pointer;
+            border: 1px solid #b7b7b7;
+            position: relative;
+
+            .innerBox {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 20px;
+              height: 20px;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              background: #ebebebe1;
+              opacity: 0;
+              transition: all 0.2s;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          .selected {
+            .innerBox {
+              opacity: 1;
+              width: 10px;
+              height: 10px;
+              background: #5d5d5d;
+            }
+          }
+
+          .createAcc {
+            font-size: 15px;
+            font-family: "H-Regular";
+          }
+        }
+      }
+    }
+    &--rightone {
+      max-width: 1490px;
+      width: 100%;
+      padding-right: 20px;
+
+      overflow-x: hidden;
+      .firstheader {
+        width: 97.9%;
+        border-bottom: 1px solid #9b9b9b;
+        .top {
+          font-size: 18px;
+          font-family: "H-Regular";
+          color: #000;
+          span {
+            color: rgba(130, 130, 130, 0.827);
+          }
+        }
+        .bottom {
+          display: flex;
+          flex-direction: row;
+          font-size: 22px;
+          justify-content: space-between;
+          font-family: "H-Regular";
+          padding-top: 20px;
+          padding-bottom: 15px;
+          p {
+            width: 100%;
+          }
+
+          .options {
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+            justify-content: flex-end;
+            p {
+              text-transform: capitalize;
+            }
+            .createAccDiv {
+              padding-bottom: 0;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      .secondheader {
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        .addressBody {
+          width: 100%;
+          .addressList {
+            height: 40vh;
+            overflow: scroll;
+            padding-right: 15px;
+            &::-webkit-scrollbar {
+              width: 2.5px;
+              height: 0 !important;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: #98989800;
+              margin-top: 60px;
+              margin-bottom: 90px;
+              border-radius: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: #3e3e3e;
+              border-radius: 5px;
+            }
+
+            .addressSingleContainer {
+              display: flex;
+              flex-direction: column;
+              padding: 0px 20px 10px 20px;
+              border-bottom: 1px solid #9b9b9b;
+              height: 220px !important;
+              width: 100%;
+
+              .addressSingle {
+                display: flex;
+                justify-content: space-between;
+
+                .addressDetails {
+                  width: 55%;
+
+                  .addressName {
+                    margin-top: 35px;
+                    margin-bottom: 25px;
+
+                    p {
+                      font-family: "H-Bold";
+                      font-size: 28px;
+                      text-transform: uppercase;
+                    }
+                  }
+
+                  .addressComplete {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    p {
+                      font-family: "H-Light";
+                      color: #646464;
+                      font-size: 18px;
+                      line-height: 1.6;
+                      text-transform: capitalize;
+                    }
+                  }
+
+                  .addressMobile {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+
+                    p {
+                      font-family: "H-Light";
+                      color: #646464;
+                      font-size: 18px;
+                    }
+                  }
+                }
+
+                .addressButtons {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-self: flex-start;
+                  margin-top: 38px;
+
+                  .addressEditButton {
+                    border: 1.5px solid #000000;
+                    color: #000;
+                    width: 179px;
+                    height: 51px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 35px;
+
+                    &:hover {
+                      cursor: pointer;
+                      color: #fff;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .newAdd {
+            width: 345px;
+            height: 51px;
+            text-align: center;
+            font-size: 13px;
+            font-family: "H-Light";
+            padding-top: 18px;
+            text-transform: uppercase;
+            margin-top: 25px;
+          }
+        }
+      }
+      .topSubheading {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        .newAdd2 {
+          font-size: 22px;
+          text-transform: uppercase;
+          span {
+            cursor: pointer;
+            width: fit-content;
+            font-family: "H-Regular";
+            margin: 10px 0px 15px 0px;
+            color: $primary-font-color;
+            text-transform: uppercase;
+            display: inline-block;
+            position: relative;
+            border: none;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            color: #646464;
+            transition: all 0.5s;
+          }
+
+          span::after {
+            content: "";
+            right: 0;
+            margin-top: 20px;
+            position: absolute;
+            font-family: "H-Light";
+            width: 0;
+            transition-property: width;
+            transition-duration: 0.1s;
+            padding-bottom: 10px;
+            transition: all 0.5s;
+          }
+          span:hover::after,
+          span:focus::after,
+          span:active::after {
+            left: 0;
+            right: auto;
+            width: 100%;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    &--second {
+      .orderBox {
+        width: 500px;
+        padding: 50px;
+        border: 1px solid black;
+
+        &-title {
+          font-size: 24px;
+          font-family: "H-Regular";
+          text-align: center;
+          text-transform: uppercase;
+          padding-bottom: 15px;
+          margin-top: -10px;
+        }
+
+        &-hrLine {
+          width: 100%;
+          height: 1px;
+          background: #e1e1e1;
+          margin-bottom: 20px;
+        }
+      }
+
+      .orderSummary {
+        &-product {
+          font-size: 18px;
+          font-family: "H-Bold";
+          padding-bottom: 25px;
+          color: #363636;
+        }
+
+        .orderItemList {
+          height: 17vh;
+          overflow: scroll;
+          width: 104%;
+
+          &::-webkit-scrollbar {
+            width: 2px;
+            height: 0;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #000000b2;
+            border-radius: 5px;
+          }
+
+          .singleItem {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            color: #7d7d7d;
+            font-size: 16px;
+            font-family: "H-Regular";
+            padding-bottom: 15px;
+            margin-right: 13px;
+          }
+        }
+
+        .orderTotal {
+          border-top: 1px solid black;
+          padding-top: 15px;
+          height: 8vh;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            width: 2px;
+            height: 0;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: transparent;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #000000b2;
+            border-radius: 5px;
+          }
+          .subTotal {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            padding-bottom: 15px;
+            margin-right: 0px;
+
+            p {
+              font-family: "H-Bold";
+              color: #363636;
+            }
+          }
+        }
+
+        .totalPrice {
+          border-top: 1px solid black;
+          margin-top: 10px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          display: flex;
+          justify-content: space-between;
+
+          &-total {
+            font-size: 18px;
+            font-family: "H-Bold";
+          }
+
+          &-price {
+            font-size: 24px;
+            font-family: "H-Bold";
+          }
+        }
+
+        .couponCode {
+          display: flex;
+          justify-content: space-between;
+
+          &-input {
+            width: 180px;
+            height: 35px;
+            padding-left: 10px;
+            font-size: 13px;
+            font-family: "H-Bold";
+            outline: none;
+            border: 1.5px solid #707070;
+            color: #5d5d5d;
+
+            &::placeholder {
+              text-transform: uppercase;
+              // color: #5d5d5d;
+            }
+          }
+
+          &-button {
+            width: 100px;
+            transition: all 0.5s ease-out;
+            // padding: 10px 14px;
+            font-size: 13px;
+            height: 35px;
+            border: 1px solid #707070;
+            outline: none;
+            cursor: pointer;
+            font-family: "H-Bold";
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            background-color: white;
+            color: #5d5d5d;
+            position: relative;
+
+            span {
+              position: relative;
+            }
+            &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              content: "";
+              transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+              transform: scale(0, 1);
+              transform-origin: right center;
+              background: black;
+            }
+            &:hover {
+              color: white;
+              &::before {
+                transform: scale(1, 1);
+                transform-origin: left center;
+              }
+            }
+          }
+        }
+
+        .payment {
+          padding-top: 25px;
+
+          &-Btn {
+            width: 100%;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-family: "H-Bold";
+            padding: 10px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .checkout {
+    padding-top: 60px;
+    // overflow: scroll !important;
+
+    &__heading {
+      font-size: 33px;
+      padding: 20px 0px;
+    }
+
+    &__loginDiv {
+      font-size: 16px;
+      padding: 10px 5px;
+      display: flex;
+      .returning {
+        padding-right: 10px;
+      }
+
+      .loginText {
+        font-family: "H-Bold";
+        color: black;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    &__content {
+      padding: 10px 0px;
+
+      &--first {
+        overflow: scroll;
+        width: 61.5%;
+        height: 70vh;
+        margin-right: 10%;
+        .billingDetail {
+          font-size: 24px;
+          font-family: "H-Bold";
+        }
+
+        .checkoutForm {
+          padding: 20px 0px;
+
+          .checkoutLabel {
+            font-size: 13px;
+            font-family: "H-Bold";
+            color: #a1a1a1;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+          }
+
+          .inputDiv,
+          .exception {
+            width: 100%;
+            height: 35px;
+            font-size: 12px;
+            background-color: #ebebeb;
+            border: none;
+            outline: none;
+            color: #a1a1a1;
+            // text-transform: uppercase;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+          }
+
+          .countryDiv {
+            // width: 600px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .customSelect {
+              font-family: "H-Regular";
+              font-size: 14px;
+              padding-top: 10px;
+            }
+            .css-1awxrmx-control {
+              height: 35px !important;
+            }
+          }
+
+          .nameDiv {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .firstNameDiv,
+            .lastNameDiv {
+              width: 47%;
+            }
+          }
+
+          .createAccDiv {
+            display: flex;
+            padding-bottom: 35px;
+            align-items: center;
+
+            .checkBox {
+              width: 20px;
+              height: 20px;
+              // background: white;
+              border-radius: 50%;
+              margin-right: 20px;
+              cursor: pointer;
+              border: 1px solid #b7b7b7;
+              position: relative;
+
+              .innerBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: #ebebebe1;
+                opacity: 0;
+                transition: all 0.2s;
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .selected {
+              .innerBox {
+                opacity: 1;
+                width: 10px;
+                height: 10px;
+                background: #5d5d5d;
+              }
+            }
+
+            .createAcc {
+              font-size: 15px;
+              font-family: "H-Regular";
+            }
+          }
+        }
+      }
+      &--rightone {
+        margin-left: -15px;
+        .firstheader {
+          .top {
+            font-size: 16px;
+          }
+          .bottom {
+            font-size: 18px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+          }
+        }
+        .secondheader {
+          .addressBody {
+            .addressList {
+              height: 55vh;
+
+              &::-webkit-scrollbar {
+                width: 2px;
+              }
+              .addressSingleContainer {
+                padding: 0px 15px 5px 15px;
+                height: 170px !important;
+                .addressSingle {
+                  .addressDetails {
+                    .addressName {
+                      margin-top: 25px;
+                      margin-bottom: 15px;
+
+                      p {
+                        font-size: 22px;
+                      }
+                    }
+
+                    .addressComplete {
+                      p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                      }
+                    }
+
+                    .addressMobile {
+                      margin-top: 10px;
+                      margin-bottom: 10px;
+
+                      p {
+                        font-size: 17px;
+                      }
+                    }
+                  }
+
+                  .addressButtons {
+                    margin-top: 25px;
+                    .addressEditButton {
+                      border: 1px solid #000000;
+                      width: 140px;
+                      height: 38px;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+            .newAdd {
+              width: 300px;
+              height: 40px;
+              font-size: 12px;
+              padding-top: 12px;
+              margin-top: 10px;
+            }
+          }
+        }
+        .topSubheading {
+          .newAdd2 {
+            font-size: 20px;
+            span {
+              margin: 10px 0px 5px 0px !important;
+            }
+          }
+        }
+      }
+
+      &--second {
+        .orderBox {
+          width: 500px;
+          padding: 30px;
+
+          &-title {
+            font-size: 22px;
+            padding-bottom: 10px;
+          }
+
+          &-hrLine {
+            margin-bottom: 15px;
+          }
+        }
+
+        .orderSummary {
+          &-product {
+            font-size: 17px;
+            padding-bottom: 15px;
+          }
+
+          .orderItemList {
+            height: 15vh;
+
+            &::-webkit-scrollbar {
+              width: 1.5px;
+            }
+
+            .singleItem {
+              font-size: 14px;
+              padding-bottom: 10px;
+              margin-right: 22px;
+            }
+          }
+
+          .orderTotal {
+            padding-top: 10px;
+            margin-top: 10px;
+            height: 10vh;
+            .subTotal {
+              font-size: 15px;
+              padding-bottom: 10px;
+            }
+          }
+
+          .totalPrice {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &-total {
+              font-size: 16px;
+            }
+
+            &-price {
+              font-size: 18px;
+            }
+          }
+
+          .couponCode {
+            margin-top: 20px;
+            &-input {
+              font-size: 12px;
+              border: 1px solid #707070;
+            }
+            &-button {
+              font-size: 12px;
+            }
+          }
+
+          .payment {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .checkout {
+    padding-top: 60px;
+    overflow: scroll !important;
+
+    &__heading {
+      font-size: 33px;
+    }
+
+    &__loginDiv {
+      font-size: 16px;
+      padding: 10px 0;
+      .returning {
+        font-family: "H-Regular";
+        color: #707070;
+        padding-right: 10px;
+      }
+
+      .loginText {
+        font-family: "H-Bold";
+        color: black;
+        text-decoration: none;
+        border: none;
+      }
+    }
+
+    &__content {
+      padding: 10px 0px;
+      flex-direction: column;
+      align-items: center;
+
+      &--first {
+        width: 100%;
+        padding-right: 0;
+        overflow: hidden !important;
+        height: 100% !important;
+        padding-right: 0;
+        margin-right: 0;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .billingDetail {
+          font-size: 24px;
+          font-family: "H-Bold";
+        }
+
+        .checkoutForm {
+          padding: 30px 0px;
+          // width: 600px;
+
+          .checkoutLabel {
+            font-size: 14px;
+            font-family: "H-Bold";
+            color: #a1a1a1;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+          }
+
+          .inputDiv,
+          .exception {
+            width: 100%;
+            height: 45px;
+            font-size: 15px;
+            background-color: #ebebeb;
+            border: none;
+            outline: none;
+            color: #a1a1a1;
+            // text-transform: uppercase;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+          }
+
+          .countryDiv {
+            // width: 600px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .customSelect {
+              font-family: "H-Regular";
+              font-size: 14px;
+              padding-top: 10px;
+            }
+            .css-1awxrmx-control {
+              height: 45px !important;
+            }
+          }
+
+          .nameDiv {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .firstNameDiv {
+              width: 47% !important;
+            }
+          }
+
+          .createAccDiv {
+            display: flex;
+            padding-bottom: 35px;
+            align-items: center;
+
+            .checkBox {
+              width: 20px;
+              height: 20px;
+              // background: white;
+              border-radius: 50%;
+              margin-right: 20px;
+              cursor: pointer;
+              border: 1px solid #b7b7b7;
+              position: relative;
+
+              .innerBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: #ebebebe1;
+                opacity: 0;
+                transition: all 0.2s;
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .selected {
+              .innerBox {
+                opacity: 1;
+                width: 10px;
+                height: 10px;
+                background: #5d5d5d;
+              }
+            }
+
+            .createAcc {
+              font-size: 15px;
+              font-family: "H-Regular";
+            }
+          }
+        }
+      }
+      &--rightone {
+        margin-left: 0;
+
+        .secondheader {
+          .addressBody {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            .addressList {
+              height: 35vh;
+              width: 100%;
+
+              &::-webkit-scrollbar {
+                width: 2px;
+                display: none;
+              }
+            }
+            .newAdd {
+              margin-top: 20px;
+            }
+          }
+        }
+        .topSubheading {
+          .newAdd2 {
+            font-size: 20px;
+            span {
+              margin: 10px 0px 8px 0px !important;
+            }
+          }
+        }
+      }
+
+      &--second {
+        padding-top: 20px;
+        width: 100%;
+        .orderBox {
+          width: 100%;
+          padding: 30px;
+
+          &-title {
+            font-size: 25px;
+            padding-bottom: 15px;
+          }
+
+          &-hrLine {
+            margin-bottom: 18px;
+          }
+        }
+
+        .orderSummary {
+          &-product {
+            font-size: 19px;
+            padding-bottom: 20px;
+          }
+
+          .orderItemList {
+            height: 17vh;
+            width: 101.5%;
+
+            &::-webkit-scrollbar {
+              width: 1.5px;
+            }
+
+            .singleItem {
+              font-size: 17px;
+              padding-bottom: 15px;
+              margin-right: 15px;
+            }
+          }
+
+          .orderTotal {
+            padding-top: 15px;
+            margin-top: 15px;
+            overflow: visible;
+            height: 100%;
+
+            .subTotal {
+              font-size: 18px;
+              padding-bottom: 15px;
+              margin-right: 0;
+            }
+          }
+
+          .totalPrice {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            &-total {
+              font-size: 18px;
+            }
+
+            &-price {
+              font-size: 20px;
+            }
+          }
+
+          .couponCode {
+            margin-top: 25px;
+            &-input {
+              font-size: 13px;
+            }
+            &-button {
+              font-size: 13px;
+            }
+          }
+
+          .payment {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .checkout {
+    padding-top: 60px;
+    overflow: scroll !important;
+
+    &__heading {
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0px;
+    }
+
+    &__loginDiv {
+      font-size: 15px;
+      padding: 10px 0;
+      .returning {
+        font-family: "H-Regular";
+        color: #707070;
+        padding-right: 10px;
+      }
+
+      .loginText {
+        font-family: "H-Bold";
+        color: black;
+        text-decoration: none;
+        border: none;
+      }
+    }
+
+    &__content {
+      padding: 0px 0px;
+      flex-direction: column;
+      align-items: center;
+
+      &--first {
+        width: 100%;
+        padding-right: 0;
+        overflow: hidden !important;
+        height: 100% !important;
+        padding-right: 0;
+        margin-right: 0;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .billingDetail {
+          font-size: 24px;
+          font-family: "H-Bold";
+        }
+
+        .checkoutForm {
+          padding: 10px 0px;
+          // width: 600px;
+
+          .checkoutLabel {
+            font-size: 12px;
+            font-family: "H-Bold";
+            color: #a1a1a1;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+          }
+
+          .inputDiv,
+          .exception {
+            width: 100%;
+            height: 32px;
+            font-size: 12px;
+            background-color: #ebebeb;
+            border: none;
+            outline: none;
+            color: #a1a1a1;
+            // text-transform: uppercase;
+            padding-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+          }
+
+          .countryDiv {
+            // width: 600px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .customSelect {
+              font-family: "H-Regular";
+              font-size: 12px;
+              padding-top: 5px;
+            }
+            .css-1awxrmx-control {
+              height: 32px !important;
+            }
+          }
+
+          .nameDiv {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .firstNameDiv {
+              width: 47% !important;
+            }
+          }
+
+          .createAccDiv {
+            display: flex;
+            padding-bottom: 25px;
+            align-items: center;
+
+            .checkBox {
+              width: 20px;
+              height: 20px;
+              // background: white;
+              border-radius: 50%;
+              margin-right: 20px;
+              cursor: pointer;
+              border: 1px solid #b7b7b7;
+              position: relative;
+
+              .innerBox {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background: #ebebebe1;
+                opacity: 0;
+                transition: all 0.2s;
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .selected {
+              .innerBox {
+                opacity: 1;
+                width: 10px;
+                height: 10px;
+                background: #5d5d5d;
+              }
+            }
+
+            .createAcc {
+              font-size: 15px;
+              font-family: "H-Regular";
+            }
+          }
+        }
+      }
+      &--rightone {
+        margin-left: 0;
+        padding-right: 0;
+        .firstheader {
+          .top {
+            font-size: 14px;
+          }
+          .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 14px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            .options {
+              width: auto;
+              font-size: 14px;
+              padding-top: 15px;
+              .createAccDiv {
+                padding-left: 0;
+                .checkBox {
+                  width: 15px;
+                  height: 15px;
+                  .innerBox {
+                    width: 8px;
+                    height: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .secondheader {
+          .addressBody {
+            .addressList {
+              height: 35vh;
+              padding-right: 8px;
+
+              &::-webkit-scrollbar {
+                width: 2px;
+                display: none;
+              }
+              .addressSingleContainer {
+                padding: 0px 0px 5px 10px;
+                height: 150px !important;
+                .addressSingle {
+                  width: 100%;
+
+                  .addressDetails {
+                    width: 200%;
+                    .addressName {
+                      margin-top: 15px;
+                      margin-bottom: 10px;
+
+                      p {
+                        font-size: 18px;
+                      }
+                    }
+
+                    .addressComplete {
+                      p {
+                        font-size: 14px;
+                        line-height: 1.4;
+                      }
+                    }
+
+                    .addressMobile {
+                      margin-top: 5px;
+                      margin-bottom: 5px;
+
+                      p {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+
+                  .addressButtons {
+                    margin-top: 15px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: center;
+                    .addressEditButton {
+                      border: 1px solid #000000;
+                      width: 110px;
+                      height: 30px;
+                      font-size: 10px !important;
+                    }
+                  }
+                }
+              }
+            }
+            .bottom_button {
+              display: flex;
+              justify-content: center;
+              .newAdd {
+                width: 100%;
+                height: 40px;
+                font-size: 12px;
+                padding-top: 12px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+        .topSubheading {
+          .newAdd2 {
+            font-size: 20px;
+            span {
+              margin: 10px 0px 5px 0px !important;
+            }
+          }
+        }
+      }
+
+      &--second {
+        padding-top: 20px;
+        width: 100%;
+        .orderBox {
+          width: 100%;
+          padding: 25px;
+
+          &-title {
+            font-size: 20px;
+            padding-bottom: 10px;
+          }
+
+          &-hrLine {
+            margin-bottom: 10px;
+          }
+        }
+
+        .orderSummary {
+          &-product {
+            font-size: 15px;
+            padding-bottom: 10px;
+          }
+
+          .orderItemList {
+            height: 15vh;
+            width: 103%;
+
+            &::-webkit-scrollbar {
+              width: 1.5px;
+            }
+
+            .singleItem {
+              font-size: 15px;
+              padding-bottom: 10px;
+              margin-right: 15px;
+            }
+          }
+
+          .orderTotal {
+            padding-top: 15px;
+            margin-top: 15px;
+            height: 100%;
+            overflow: visible;
+
+            .subTotal {
+              font-size: 15px;
+              padding-bottom: 10px;
+              margin-right: 0;
+            }
+          }
+
+          .totalPrice {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &-total {
+              font-size: 16px;
+            }
+
+            &-price {
+              font-size: 18px;
+            }
+          }
+
+          .couponCode {
+            margin-top: 15px;
+            &-input {
+              font-size: 11px;
+            }
+            &-button {
+              font-size: 11px;
+            }
+          }
+
+          .payment {
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

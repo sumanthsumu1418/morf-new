@@ -1,0 +1,33 @@
+@import "../shared/colorVar";
+
+.video-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 100px;
+  //   height: 100%;
+  &-title {
+    // padding: 0px 150px;
+    padding-bottom: 20px;
+    font-size: 45px;
+    width: 65%;
+    font-family: "H-Bold";
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-video {
+    position: relative;
+    width: 100%;
+
+    &-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+}

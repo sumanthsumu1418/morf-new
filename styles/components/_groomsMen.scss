@@ -1,0 +1,37 @@
+@import "../shared/colorVar";
+
+.groomsmen {
+  margin: 0px 0px 20px 0px;
+  width: 100%;
+
+  &-heading {
+    h1 {
+      font-family: "H-Bold";
+      font-size: 50px;
+    }
+  }
+
+  &-intro {
+    padding-bottom: 40px;
+
+    &-101 {
+      font-size: 50px;
+      font-family: "H-Bold";
+
+      p {
+        text-align: left;
+        margin-left: 100px;
+        margin-top: -45px;
+        color: $secondry-font-color;
+        font-size: 14px;
+        font-family: "H-Regular";
+      }
+    }
+  }
+
+  &-image {
+    img {
+      width: 100%;
+    }
+  }
+}
